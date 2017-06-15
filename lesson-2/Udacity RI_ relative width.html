@@ -14,13 +14,14 @@
     }
     img {
       float: left;
-      /*
-      Your code goes here!
-      */
+      width: calc((100% - 20px) / 3); /* because 20px is the total width of margins */
+      margin-right: 10px;             /* and each image needs to have a right margin of 10px (except rightmost image of course) */
     }
-    /*
-    Hmmmmm... you might need another CSS class too.
-    */
+
+    img:last-of-type {
+      margin-right: 0;                /* because rightmost image is an exception in that it doesn't need a right margin */
+    }
+
   </style>
 
 <link rel="import" href="chrome-extension://melpgahbngpgnbhhccnopmlmpbmdaeoi/app/templates/feedback.html" id="udacity-test-widget"><script id="ud-grader-options">UdacityFEGradingEngine.turnOn();</script></head>
